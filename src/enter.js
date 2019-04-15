@@ -40,8 +40,8 @@ export default class Enter extends Plugin {
 		this.listenTo( viewDocument, 'enter', ( evt, data ) => {
 			data.preventDefault();
 
-			// The soft enter key is handled by the ShiftEnter plugin.
-			if ( data.isSoft ) {
+			// SWAP FROM UPSTREAM: MAKE ENTER HANDLE SOFT RETURNS
+			if ( !data.isSoft ) {
 				return;
 			}
 
