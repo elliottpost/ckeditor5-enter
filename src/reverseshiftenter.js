@@ -36,7 +36,7 @@ export default class ReverseShiftEnter extends Plugin {
 		const viewDocument = view.document;
 
 		// Configure the schema.
-		schema.register( 'softBreak', {
+		schema.register( 'reverseSoftBreak', {
 			allowWhere: '$text',
 			isInline: true
 		} );
@@ -44,13 +44,13 @@ export default class ReverseShiftEnter extends Plugin {
 		// Configure converters.
 		conversion.for( 'upcast' )
 			.elementToElement( {
-				model: 'softBreak',
+				model: 'reverseSoftBreak',
 				view: 'br'
 			} );
 
 		conversion.for( 'downcast' )
 			.elementToElement( {
-				model: 'softBreak',
+				model: 'reverseSoftBreak',
 				view: ( modelElement, viewWriter ) => viewWriter.createEmptyElement( 'br' )
 			} );
 

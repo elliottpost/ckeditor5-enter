@@ -24,7 +24,7 @@ export default class ShiftEnterCommand extends Command {
 		const doc = model.document;
 
 		model.change( writer => {
-			softBreakAction( model, writer, doc.selection );
+			reverseSoftBreakAction( model, writer, doc.selection );
 			this.fire( 'afterExecute', { writer } );
 		} );
 	}
@@ -51,7 +51,7 @@ function isEnabled( schema, selection ) {
 	const anchorPos = selection.anchor;
 
 	// Check whether the break element can be inserted in the current selection anchor.
-	if ( !anchorPos || !schema.checkChild( anchorPos, 'softBreak' ) ) {
+	if ( !anchorPos || !schema.checkChild( anchorPos, 'reverseSoftBreak' ) ) {
 		return false;
 	}
 
@@ -73,7 +73,7 @@ function isEnabled( schema, selection ) {
 // @param {module:engine/model/writer~Writer} writer
 // @param {module:engine/model/selection~Selection|module:engine/model/documentselection~DocumentSelection} selection
 // Selection on which the action should be performed.
-function softBreakAction( model, writer, selection ) {
+function reverseSoftBreakAction( model, writer, selection ) {
 	const isSelectionEmpty = selection.isCollapsed;
 	const range = selection.getFirstRange();
 	const startElement = range.start.parent;
@@ -112,7 +112,7 @@ function softBreakAction( model, writer, selection ) {
 }
 
 function insertBreak( writer, position ) {
-	const breakLineElement = writer.createElement( 'softBreak' );
+	const breakLineElement = writer.createElement( 'reverseSoftBreak' );
 
 	writer.insert( breakLineElement, position );
 	writer.setSelection( breakLineElement, 'after' );
