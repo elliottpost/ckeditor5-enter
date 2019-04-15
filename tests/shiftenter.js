@@ -4,7 +4,7 @@
  */
 
 import VirtualTestEditor from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor';
-import ShiftEnter from '../src/shiftenter';
+import ShiftEnter from '../src/reverseshiftenter';
 import ShiftEnterCommand from '../src/shiftentercommand';
 import EnterObserver from '../src/enterobserver';
 import DomEventData from '@ckeditor/ckeditor5-engine/src/view/observer/domeventdata';

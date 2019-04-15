@@ -20,12 +20,12 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ShiftEnter extends Plugin {
+export default class ReverseShiftEnter extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'ShiftEnter';
+		return 'ReverseShiftEnter';
 	}
 
 	init() {

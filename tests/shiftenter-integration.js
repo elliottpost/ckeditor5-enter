@@ -8,7 +8,7 @@
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-import ShiftEnter from '../src/shiftenter';
+import ShiftEnter from '../src/reverseshiftenter';
 
 import { getData as getModelData, setData as setModelData } from '@ckeditor/ckeditor5-engine/src/dev-utils/model';
 import { getData as getViewData } from '@ckeditor/ckeditor5-engine/src/dev-utils/view';

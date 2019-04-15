@@ -4,7 +4,7 @@
  */
 
 import VirtualTestEditor from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor';
-import Enter from '../src/enter';
+import Enter from '../src/reverseenter';
 import EnterCommand from '../src/entercommand';
 import EnterObserver from '../src/enterobserver';
 import DomEventData from '@ckeditor/ckeditor5-engine/src/view/observer/domeventdata';

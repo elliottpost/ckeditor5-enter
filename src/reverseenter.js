@@ -20,12 +20,12 @@ import EnterObserver from './enterobserver';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class Enter extends Plugin {
+export default class ReverseEnter extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'Enter';
+		return 'ReverseEnter';
 	}
 
 	init() {

@@ -6,7 +6,7 @@
 import ModelTestEditor from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor';
 import InsertOperation from '@ckeditor/ckeditor5-engine/src/model/operation/insertoperation';
 import { getData, setData } from '@ckeditor/ckeditor5-engine/src/dev-utils/model';
-import ShiftEnter from '../src/shiftenter';
+import ShiftEnter from '../src/reverseshiftenter';
 
 describe( 'ShiftEnterCommand', () => {
 	let editor, model, doc, schema, command;

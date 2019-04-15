@@ -6,8 +6,8 @@
 /* globals console:false, document, window */
 
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-import Enter from '../../src/enter';
-import ShiftEnter from '../../src/shiftenter';
+import Enter from '../../src/reverseenter';
+import ShiftEnter from '../../src/reverseshiftenter';
 import Typing from '@ckeditor/ckeditor5-typing/src/typing';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Undo from '@ckeditor/ckeditor5-undo/src/undo';
