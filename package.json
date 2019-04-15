@@ -1,5 +1,5 @@
 {
-  "name": "@ckeditor/ckeditor5-reverse-enter",
+  "name": "@elliottpost/ckeditor5-reverse-enter",
   "version": "11.0.1",
   "description": "Reverse Enter feature for CKEditor 5 (swaps shift+enter and enter)",
   "keywords": [
